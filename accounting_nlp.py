@@ -28,7 +28,7 @@ if uploaded_files:
 
      similarity = []
      for i in range(0, len(texts)):
-       similarity.append(["{:.0%}".format(str(round(j, 2))) for j in cosine_sim[i]])
+       similarity.append(["{:.0%}".format(round(j, 2)) for j in cosine_sim[i]])
      #"{:.0%}".format(
      
      df_labels = []
