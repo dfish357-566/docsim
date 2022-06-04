@@ -17,6 +17,7 @@ for uploaded_file in uploaded_files:
      st.write(bytes_data)
 
 
+print(bytes_data)
 '''
 def open_text(file_name):
   text_file = open(file_name, "r")
@@ -26,6 +27,8 @@ def open_text(file_name):
 '''
 
 #file_names = ["apple_2019.txt", "apple_2020.txt", "microsoft_2019.txt", "microsoft_2020.txt"]
+
+#file_names = 
 
 texts = []
 for i in file_names:
