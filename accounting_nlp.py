@@ -45,11 +45,11 @@ if uploaded_files:
      def convert_df(df):
           return df.to_csv().encode('utf-8')
 
-     csv = convert_df(my_large_df)
+     csv = convert_df(df)
 
      st.download_button(
           label="Download data as CSV",
           data=csv,
-          file_name='large_df.csv',
+          file_name='document_similarities.csv',
           mime='text/csv',
       )
