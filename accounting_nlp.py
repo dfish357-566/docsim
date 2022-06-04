@@ -4,11 +4,6 @@ import streamlit as st
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.feature_extraction.text import TfidfVectorizer
 
-
-#from collections import namedtuple
-#import altair as alt
-
-
 # take input files
 uploaded_files = st.file_uploader("Choose a CSV file", accept_multiple_files=True)
 texts = []
@@ -29,10 +24,6 @@ tfidf_matrix = tfidf_vectorizer.fit_transform(texts)
 
 # compute and print the cosine similarity matrix
 cosine_sim = cosine_similarity(tfidf_matrix, tfidf_matrix)
-print(cosine_sim)
-
-#for i in range(0, 4):
-#  print(file_names[i], [str(round(j, 2)) for j in cosine_sim[i]])
 
 similarity = []
 for i in range(0, len(texts)):
@@ -47,4 +38,4 @@ df.columns = df_labels
   
 # Change the row indexes
 df.index = df_labels
-print(df.to_string())
+st.write(df.to_string())
