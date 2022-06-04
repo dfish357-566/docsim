@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 import streamlit as st
 from sklearn.metrics.pairwise import cosine_similarity
+from sklearn.feature_extraction.text import TfidfVectorizer
 
 
 #from collections import namedtuple
