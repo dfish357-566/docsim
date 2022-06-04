@@ -45,8 +45,8 @@ tfidf_matrix = tfidf_vectorizer.fit_transform(texts)
 cosine_sim = cosine_similarity(tfidf_matrix, tfidf_matrix)
 print(cosine_sim)
 
-for i in range(0, 4):
-  print(file_names[i], [str(round(j, 2)) for j in cosine_sim[i]])
+#for i in range(0, 4):
+#  print(file_names[i], [str(round(j, 2)) for j in cosine_sim[i]])
 
 similarity = []
 for i in range(0, 4):
