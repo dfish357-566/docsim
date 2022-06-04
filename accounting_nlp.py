@@ -11,10 +11,12 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 
 # take input files
 uploaded_files = st.file_uploader("Choose a CSV file", accept_multiple_files=True)
+texts = []
 for uploaded_file in uploaded_files:
      bytes_data = uploaded_file.read()
+     texts.append(bytes_data)
      st.write("filename:", uploaded_file.name)
-     st.write(bytes_data)
+     #st.write(bytes_data)
 
 
 
@@ -29,10 +31,7 @@ def open_text(file_name):
 #file_names = ["apple_2019.txt", "apple_2020.txt", "microsoft_2019.txt", "microsoft_2020.txt"]
 
 #file_names = 
-
-texts = []
-for i in file_names:
-  texts.append(open_text(i))
+  
 
 
 
