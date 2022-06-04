@@ -5,7 +5,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.feature_extraction.text import TfidfVectorizer
 
 # take input files
-uploaded_files = st.file_uploader(accept_multiple_files=True)
+uploaded_files = st.file_uploader("Choose file(s) to upload", accept_multiple_files=True)
 texts = []
 file_names = []
 for uploaded_file in uploaded_files:
