@@ -12,27 +12,13 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 # take input files
 uploaded_files = st.file_uploader("Choose a CSV file", accept_multiple_files=True)
 texts = []
+file_names = []
 for uploaded_file in uploaded_files:
      bytes_data = uploaded_file.read()
      texts.append(bytes_data)
+     file_names.append(uploaded_file.name)
      st.write("filename:", uploaded_file.name)
      #st.write(bytes_data)
-
-
-
-'''
-def open_text(file_name):
-  text_file = open(file_name, "r")
-  data = text_file.read()
-  text_file.close()
-  return data
-'''
-
-#file_names = ["apple_2019.txt", "apple_2020.txt", "microsoft_2019.txt", "microsoft_2020.txt"]
-
-#file_names = 
-  
-
 
 
 # Initialize an instance of tf-idf Vectorizer
@@ -49,11 +35,11 @@ print(cosine_sim)
 #  print(file_names[i], [str(round(j, 2)) for j in cosine_sim[i]])
 
 similarity = []
-for i in range(0, 4):
+for i in range(0, len(texts)):
   similarity.append([str(round(j, 2)) for j in cosine_sim[i]])
 
 df_labels = []
-for i in range(0, 4):
+for i in range(0, len(texts)):
   df_labels.append(file_names[i].split(".txt")[0])
 
 df = pd.DataFrame(similarity)
