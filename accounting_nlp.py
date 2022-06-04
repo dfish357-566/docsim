@@ -38,4 +38,4 @@ df.columns = df_labels
   
 # Change the row indexes
 df.index = df_labels
-st.write(df.to_string())
+st.table(df)
