@@ -17,7 +17,7 @@ for uploaded_file in uploaded_files:
      st.write(bytes_data)
 
 
-print(bytes_data)
+print(type(bytes_data))
 '''
 def open_text(file_name):
   text_file = open(file_name, "r")
