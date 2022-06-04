@@ -42,8 +42,7 @@ if uploaded_files:
      st.table(df)
      
      @st.cache
-      def convert_df(df):
-          # IMPORTANT: Cache the conversion to prevent computation on every rerun
+     def convert_df(df):
           return df.to_csv().encode('utf-8')
 
      csv = convert_df(my_large_df)
